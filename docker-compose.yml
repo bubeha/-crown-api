@@ -50,6 +50,14 @@ services:
     networks:
       - backend
 
+  mongodb:
+    image: mongo:4.2-bionic
+    ports:
+      - "27017:27017"
+    command: mongod
+    networks:
+      - backend
+
 networks:
   backend:
     driver: bridge
